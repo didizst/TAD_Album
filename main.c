@@ -1,3 +1,7 @@
+// Programa feito por Diego Miqueias
+// Criado e executado em CLion
+// Link Github: https://github.com/didizst/TAD_Album
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
