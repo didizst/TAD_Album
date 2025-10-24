@@ -43,6 +43,7 @@ O arquivo `main.c` inclui diretamente `gCofo.c` e `album.c`. Desta forma, basta 
 ### 4.1. No Linux/macOS
 
 ```bash
+cd TAD_Album
 gcc -o main.exe main.c
 ./main.exe
 ```
@@ -50,6 +51,7 @@ gcc -o main.exe main.c
 ### 4.2. No Windows (usando MinGW)
 
 ```bash
+cd TAD_Album
 gcc -o main.exe main.c
 ./main.exe
 ```
