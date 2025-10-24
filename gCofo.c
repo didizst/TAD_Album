@@ -1,3 +1,7 @@
+// Programa feito por Diego Miqueias
+// Criado e executado em CLion
+// Link Github: https://github.com/didizst/TAD_Album
+
 #define TRUE 1
 #define FALSE 0
 #include <stdlib.h>
@@ -98,4 +102,5 @@ int gcofClean(gCofo* gc){
         return TRUE;
     }
     return FALSE;
+
 }
