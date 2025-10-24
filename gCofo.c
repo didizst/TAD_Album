@@ -51,9 +51,7 @@ void *gcofQuery(gCofo *c, void *key, int (*cmp)(void *, void * ) )
     if ( c != NULL ) {
         if ( c->numItens > 0 ){
             i = 0;
-            // Loop corrigido para evitar leitura fora dos limites (Bug 2)
             while (i < c->numItens) {
-                // Ordem dos parâmetros corrigida (Bug 1)
                 stat = cmp(c->item[i], key);
                 if (stat == TRUE) {
                     data = c->item[i];
@@ -73,13 +71,10 @@ void *gcofRemove(gCofo *c, void *key, int (*cmp)(void *, void *) )
         if (c->numItens > 0 ) {
             i = 0;
             stat = FALSE;
-            // Loop corrigido para evitar leitura fora dos limites (Bug 2)
             while ( i < c->numItens ) {
-                // Ordem dos parâmetros corrigida (Bug 1)
                 stat = cmp (c->item[i], key);
                 if (stat == TRUE) {
                     data = c->item[i];
-                    // Loop de 'shift' corrigido para (j < c->numItens - 1) (Bug 3)
                     for (j = i; j < c->numItens - 1; j++) {
                         c->item[j] = c->item[j+1];
                     }
